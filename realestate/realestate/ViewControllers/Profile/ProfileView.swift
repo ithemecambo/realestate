@@ -20,7 +20,7 @@ struct ProfileView: View {
                         VStack(alignment: .leading, spacing: 0) {
                             ProfileHead(title: "Personal Information")
                             NavigationLink(
-                                destination: SettingView(),
+                                destination: PropertyDetailView(),
                                 label: {
                                     ProfileNav(icon: "person.crop.circle.fill", title: "My Information")
                                 })
@@ -73,6 +73,7 @@ struct ProfileView: View {
             }
             
             .ignoresSafeArea()
+            .navigationBarHidden(true)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(Color(.systemGroupedBackground))
             .background(Color(.systemGroupedBackground))
